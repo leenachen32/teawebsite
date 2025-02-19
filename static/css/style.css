@@ -1,0 +1,373 @@
+/* 全局樣式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 通用樣式 */
+.header-nav,
+.hero-section,
+.footer,
+.main-content {
+    max-width: 1440px; /* 最大寬度 */
+    width: 100%; /* 自適應寬度 */
+    margin: 0 auto; /* 水平置中 */
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px 100px;
+    background-color: rgba(124, 111, 59, 1);
+    padding: 20px 23px;
+    z-index: 10;
+}
+
+.logo-container {
+    background-color: rgba(52, 53, 22, 1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+}
+
+.logo-text {
+    color: rgba(236, 229, 221, 1);
+    font-size: 50px;
+    font-family: Kaisei Tokumin, sans-serif;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 1);
+    font-size: 30px;
+    font-family: Kaisei Tokumin, sans-serif;
+    text-decoration: none;
+}
+
+/* 新增 hero-section 樣式 */
+.hero-section {
+    background-color: rgba(236, 229, 221, 1);
+    padding: 60px 20px;
+    text-align: center; /* 中心對齊 */
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1208px;
+    margin: 20px 0;
+    aspect-ratio: 2.31;
+    object-fit: contain;
+}
+
+.hero-title {
+    position: relative;
+    color: rgba(52, 53, 22, 1);
+    font-size: 72px;
+    font-family: Kaisei Tokumin, sans-serif;
+    margin: 20px 0;
+}
+
+.main-content {
+    background-color: rgba(236, 229, 221, 1);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-title {
+    color: rgba(52, 53, 22, 1);
+    font-size: 36px;
+    font-family: Kaisei Tokumin, sans-serif;
+}
+
+.contact-title {
+    color: rgba(52, 53, 22, 1);
+    font-size: 36px;
+    font-family: Kaisei Tokumin, sans-serif;
+    padding-right: 7%;
+}
+
+.contact-text {
+    color: rgba(52, 53, 22, 1);
+    font-size: 16px;
+    font-family: Kaisei Tokumin, sans-serif;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+.info-section {
+    display: flex;
+    flex: 1;
+    gap: 5px; /* 設定圖片與文字間距 */
+    max-width: 50%;
+    padding: 20px;
+}
+
+
+/* 文字區塊 */
+.contact-info {
+    color: rgba(52, 53, 22, 1);
+    font-size: 20px; /* 適當減小字體，避免行距過大 */
+    font-family: 'Kaisei Tokumin', sans-serif;
+    padding: 0px 20px;
+    max-width: 400px; /* 限制最大寬度，避免文字過長 */
+    text-align: left;
+}
+
+
+.section-title {
+    color: rgba(52, 53, 22, 1);
+    font-size: 36px;
+    font-family: Kaisei Tokumin, sans-serif;
+}
+
+.story-text {
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+    line-height: 1.8;
+    font-family: Kaisei Tokumin, sans-serif;
+    margin: 20px 0;
+}
+
+.company-description {
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+    line-height: 1.8;
+    font-family: Kaisei Tokumin, sans-serif;
+    margin: 20px 0;
+}
+
+/* 調整 label 的字體和間距 */
+.form-label {
+    font-size: 16px; /* 設定字體大小 */
+    font-weight: bold; /* 讓字體加粗，提高可讀性 */
+    color: #333; /* 設定字體顏色 */
+    margin-bottom: 5px; /* 與輸入框之間的間距 */
+    margin-top: 15px; /* 讓 label 與上方表單元素有間距 */
+    width: 40%;
+}
+
+/* 讓表單欄位有更好的間距 */
+.form-group {
+    margin-bottom: 20px; /* 調整整個欄位的底部間距 */
+    margin-left: 0px;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form-container {
+    flex: 1;
+    display: flex;
+    /* justify-content: flex-end; */
+    margin-left: 8%;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.content-grid {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+
+/* 讓輸入框和留言框更美觀 */
+.form-input {
+    width: 100%; /* 讓輸入框填滿父容器 */
+    height: 10%;
+    padding: 10px; /* 增加內部留白 */
+    font-size: 14px; /* 與 label 搭配的字體大小 */
+    border: 1px solid #ccc; /* 設定邊框 */
+    border-radius: 5px; /* 圓角邊框 */
+}
+
+/* 特別調整留言框的高度 */
+.message-area {
+    height: 120px; /* 增加留言框的高度 */
+    /* resize: vertical; 允許垂直調整大小 */
+}
+
+
+/* 圖片區域樣式 */
+.info-image {
+    width: 40%; /* 調整圖片寬度 */
+    height: auto; /* 根據寬度自動調整高度，保持比例 */
+    border-radius: 10px; /* 圓角 */
+    margin: 5px; /* 圖片上下居中 */
+}
+
+.image-row {
+    display: flex;
+    justify-content: center; /* 水平置中所有圖片 */
+    align-items: center; /* 如果需要垂直對齊 */
+    gap: 5px; /* 圖片之間的間距 */
+    flex-wrap: wrap; 
+    
+}
+
+.image-column {
+    display: flex;
+    justify-content: center; 
+    align-items: self-end; /* 如果需要垂直對齊 */
+    flex-grow: 0; /* 確保不會自動擴張 */
+    flex-shrink: 0; /* 確保不會收縮過多 */
+    flex-basis: auto; /* 讓寬度依內容大小決定 */
+    padding: 0; /* 確保沒有額外內距 */
+    margin-top: 2%;
+ 
+}
+
+
+.product-image {
+    width: 30%; /* 調整圖片寬度 */
+    align-self: center;
+    height: auto; /* 根據寬度自動調整高度，保持比例 */
+    border-radius: 5px; /* 圓角 */
+    margin-top: 5px auto;
+    margin-bottom: 50px auto;
+}
+
+.footer {
+    background-color: rgba(124, 111, 59, 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.-info {
+    color: rgba(236, 229, 221, 1);
+    font-size: 16px;
+    font-family: Kaisei Tokumin, sans-serif;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-family: Kaisei Tokumin, sans-serif;
+    text-decoration: none;
+}
+
+/* 響應式設計：適用於寬度小於 991px（平板、手機） */
+@media (max-width: 991px) {
+    /* 導覽列適應較小的寬度 */
+    .header-nav {
+        flex-wrap: wrap;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 20px; /* 字體縮小 */
+    }
+
+    /* 調整內容區塊，讓表單與聯繫資訊垂直排列 */
+    .content-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    /* 讓標題在手機上居中 */
+    .contact-title {
+        text-align: center;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    /* 讓表單區塊適應較小的螢幕 */
+    .contact-form-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /* 確保表單欄位寬度填滿 */
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form-label {
+        width: 100%; /* 讓標籤獨立換行 */
+        text-align: left;
+    }
+
+    .form-input {
+        width: 100%; /* 讓輸入框填滿 */
+    }
+
+    /* 讓留言框寬度一致 */
+    .message-area {
+        width: 100%;
+    }
+
+    /* 讓聯繫資訊變成單獨一行 */
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .contact-info {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* 調整圖片大小，避免過大 */
+    .info-image {
+        width: 80%;
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
+
+    /* 讓圖片列表在小螢幕時換行 */
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .image-column {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .product-image {
+        width: 80%;
+    }
+
+    /* 讓 footer 適應較小的螢幕 */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+}

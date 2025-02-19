@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品介紹</title>
+
+    <!-- 載入網站 CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Google Analytics 追蹤碼 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPWYQR5RZY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TPWYQR5RZY');
+    </script>
+</head>
+
+<body>
+    <!-- 🔹 頂部導覽列 -->
+    <nav class="header-nav">
+        <div class="logo-container">
+            <div class="logo-text">甲</div>
+        </div>
+        <a href="{{ url_for('home') }}" class="nav-link">首頁</a>
+        <a href="{{ url_for('story') }}" class="nav-link">品牌故事</a>
+        <a href="{{ url_for('product') }}" class="nav-link">產品介紹</a>
+        <a href="{{ url_for('contact') }}" class="nav-link">聯繫我們</a>
+    </nav>
+
+    <!-- 🔹 產品介紹區塊 -->
+    <main class="main-content">
+        <h1 class="section-title">產品介紹</h1>
+        <div class="image-grid">
+            <div class="image-row">
+                <!-- 產品圖片 1 -->
+                <div class="image-column">
+                    <img loading="lazy" src="{{ url_for('static', filename='images/product-1.jpg') }}" 
+                         alt="Tea Product Image 1" class="product-image"/>
+                </div>
+                <!-- 產品圖片 2 -->
+                <div class="image-column">
+                    <img loading="lazy" src="{{ url_for('static', filename='images/product-2.jpg') }}" 
+                         alt="Tea Product Image 2" class="product-image"/>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 🔹 頁腳 (Footer) -->
+    <footer class="footer">
+        <address class="contact-info">
+            甲上製茶<br/>
+            地址：南投縣中山路16號<br/>
+            電話：04-56779999
+        </address>
+        <nav class="footer-nav">
+            <a href="{{ url_for('story') }}" class="footer-link">品牌故事</a>
+            <a href="{{ url_for('product') }}" class="footer-link">產品介紹</a>
+            <a href="{{ url_for('contact') }}" class="footer-link">聯繫我們</a>
+        </nav>
+    </footer>
+</body>
+</html>

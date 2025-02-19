@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯繫我們 - 甲上製茶</title>
+
+    <!-- 載入 CSS 樣式 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Google Analytics 追蹤碼 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPWYQR5RZY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TPWYQR5RZY');
+    </script>
+</head>
+
+<body>
+    <!-- 🔹 導覽列 -->
+    <nav class="header-nav">
+        <div class="logo-container">
+            <div class="logo-text">甲</div>
+        </div>
+        <a href="/" class="nav-link">首頁</a>
+        <a href="/story" class="nav-link">品牌故事</a>
+        <a href="/product" class="nav-link">產品介紹</a>
+        <a href="/contact" class="nav-link">聯繫我們</a>
+    </nav>
+
+    <!-- 🔹 主要內容區 -->
+    <main class="main-content">
+        <div class="content-grid">
+            
+            <!-- 📌 聯繫表單 -->
+            <div class="contact-form-container">
+                <h1 class="contact-title">聯繫我們</h1>
+                <form method="POST" action="/contact">
+                    
+                    <div class="form-group">
+                        <label for="name" class="form-label">姓名：</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">電話：</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">信箱：</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="line" class="form-label">LineId：</label>
+                        <input type="text" id="line" name="line" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">留言：</label>
+                        <textarea id="message" name="message" class="form-input message-area" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">送出</button>
+                </form>
+            </div>
+
+            <!-- 📌 聯繫資訊 -->
+            <div class="info-section">
+                <img src="{{ url_for('static', filename='images/contact-info.jpg') }}" 
+                     alt="Tea Garden Landscape" class="info-image">
+                
+                <div class="contact-info">
+                    <h2 class="contact-title">甲上製茶</h2>
+                    <p class="contact-text">
+                        地址：南投縣中山路16號<br>
+                        電話：04-56779999<br><br>
+                        我們將盡快與你聯繫！
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 🔹 頁腳區塊 -->
+    <footer class="footer">
+        <address class="contact-info">
+            甲上製茶<br />
+            地址：南投縣中山路16號<br />
+            電話：04-56779999
+        </address>
+        <nav class="footer-nav">
+            <a href="/story" class="footer-link">品牌故事</a>
+            <a href="/product" class="footer-link">產品介紹</a>
+            <a href="/contact" class="footer-link">聯繫我們</a>
+        </nav>
+    </footer>
+</body>
+</html>

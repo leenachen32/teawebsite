@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品牌故事</title>
+
+    <!-- 載入 CSS 樣式 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Google Analytics 追蹤碼 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPWYQR5RZY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TPWYQR5RZY');
+    </script>
+</head>
+
+<body>
+    <!-- 🔹 頂部導覽列 -->
+    <nav class="header-nav">
+        <div class="logo-container">
+            <div class="logo-text">甲</div>
+        </div>
+        <a href="{{ url_for('home') }}" class="nav-link">首頁</a>
+        <a href="{{ url_for('story') }}" class="nav-link">品牌故事</a>
+        <a href="{{ url_for('product') }}" class="nav-link">產品介紹</a>
+        <a href="{{ url_for('contact') }}" class="nav-link">聯繫我們</a>
+    </nav>
+  
+    <!-- 🔹 主要內容區 -->
+    <main class="main-content">
+        <h1 class="page-title">品牌故事</h1>
+
+        <!-- 品牌故事橫幅圖片 -->
+        <img src="{{ url_for('static', filename='images/story-banner.jpg') }}" 
+             alt="品牌故事圖片" class="hero-image" />
+
+        <!-- 品牌介紹文字 -->
+        <p class="story-text">
+            甲上製茶承載著一份對茶文化的熱愛與堅持，自1980年創立以來，致力於傳承製茶工藝，
+            為每片茶葉注入細膩匠心。我們深信，好茶不僅是一種味覺享受，更是一段跨越時光的連結。
+            從高山霧繞的茶園到杯中氤氳的香氣，每一道工序都經過嚴格把關，只為帶來最純粹的自然風味。
+            我們以「自家也能安心食用」為初衷，堅守品質，傳遞健康與溫暖，讓每一杯茶都成為您日常生活中的幸福片刻。
+        </p>
+    </main>
+  
+    <!-- 🔹 頁腳區塊 -->
+    <footer class="footer">
+        <address class="contact-info">
+            甲上製茶<br />
+            地址：南投縣中山路16號<br />
+            電話：04-56779999
+        </address>
+        <nav class="footer-nav">
+            <a href="{{ url_for('story') }}" class="footer-link">品牌故事</a>
+            <a href="{{ url_for('product') }}" class="footer-link">產品介紹</a>
+            <a href="{{ url_for('contact') }}" class="footer-link">聯繫我們</a>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首頁</title>
+
+  <!-- 載入網站 CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!-- Google Analytics 追蹤碼 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPWYQR5RZY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TPWYQR5RZY');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i){
+      w[l] = w[l] || [];
+      w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PKZPR99W');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKZPR99W"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- 🔹 頂部導覽列 -->
+  <nav class="header-nav">
+    <div class="logo-container">
+      <div class="logo-text" tabindex="0">甲</div>
+    </div>
+    <a href="/" class="nav-link" tabindex="0">首頁</a>
+    <a href="/story" class="nav-link" tabindex="0">品牌故事</a>
+    <a href="/product" class="nav-link" tabindex="0">產品介紹</a>
+    <a href="/contact" class="nav-link" tabindex="0">聯繫我們</a>
+  </nav>
+
+  <!-- 🔹 首頁橫幅 (Hero Section) -->
+  <section class="hero-section">
+    <div class="hero-banner">
+      <h1 class="hero-title">甲上製茶</h1>
+      <img src="{{ url_for('static', filename='images/home-banner.jpg') }}" 
+           alt="Tea plantation landscape" class="hero-image" />
+    </div>
+    <p class="company-description">
+      甲上製茶創立於1980年，專注於生產高品質的烏龍茶和金萱茶，並供應紅茶、綠茶等飲料用茶。
+      我們堅持嚴格品質管控，所有產品均通過SGS及台茶檢驗，確保安全無虞。
+      以「自家也能安心食用」為初衷，致力提升生活品質，讓每一位顧客都能享受健康好茶。
+    </p>
+  </section>
+
+  <!-- 🔹 頁腳 (Footer) -->
+  <footer class="footer">
+    <address class="contact-info">
+      甲上製茶<br />
+      地址：南投縣中山路16號<br />
+      電話：04-56779999
+    </address>
+    <nav class="footer-nav">
+      <a href="/" class="footer-link" tabindex="0">首頁</a>
+      <a href="/story" class="footer-link" tabindex="0">品牌故事</a>
+      <a href="/product" class="footer-link" tabindex="0">產品介紹</a>
+      <a href="/contact" class="footer-link" tabindex="0">聯繫我們</a>
+    </nav>
+  </footer>
+</body>
+</html>
